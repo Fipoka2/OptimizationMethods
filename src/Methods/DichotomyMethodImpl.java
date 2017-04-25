@@ -13,8 +13,8 @@ public class DichotomyMethodImpl extends AbstractMethod implements OptimisationM
     @Override
     public void calculate()
     {
-        int a = this.getLeftEdge();
-        int b = this.getRightEdge();
+        double a = this.getLeftEdge();
+        double b = this.getRightEdge();
         int count = 0;
         double delta = this.getEps() / 2;
         double L = b - a;
@@ -27,21 +27,22 @@ public class DichotomyMethodImpl extends AbstractMethod implements OptimisationM
 
             if (getY(x1) < getY(x2))
             {
-                b = (int)x2;
-            }
-            else
+                b = x2;
+            }else
             {
                 if (getY(x1) > getY(x2))
                 {
-                    a = (int)x1;
+                    a = x1;
                 }
                 else
                 {
-                    a = (int)x1;
-                    b = (int)x2;
+                    a = 1;
+                    b = x2;
                 }
+
             }
             L = b - a;
+
 
         }
         while (L > this.getEps());

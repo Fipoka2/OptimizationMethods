@@ -15,8 +15,8 @@ public class GoldenSectionImpl extends AbstractMethod implements OptimisationMet
     {
         int count = 0;
         double x_m, x1, x2;
-        int a = this.getLeftEdge();
-        int b = this.getRightEdge();
+        double a = this.getLeftEdge();
+        double b = this.getRightEdge();
         double L = b - a;
         double alfa = (Math.sqrt(5) - 1) / 2;
         double alfa1 = 1 - alfa;
@@ -27,19 +27,19 @@ public class GoldenSectionImpl extends AbstractMethod implements OptimisationMet
             count++;
             if (getY(x1) < getY(x2))
             {
-                b = (int)x2; x2 = x1;
+                b = x2; x2 = x1;
                 x1 = a + alfa1 * (b - a);
             }
             else
             {
                 if (getY(x1) > getY(x2))
                 {
-                    a = (int)x1; x1 = x2;
+                    a = x1; x1 = x2;
                     x2 = a + alfa * (b - a);
                 }
                 else
                 {
-                    b = (int)x2; a = (int)x1;
+                    b = x2; a = x1;
                     x1 = a + alfa1 * (b - a);
                     x2 = a + alfa * (b - a);
                 }

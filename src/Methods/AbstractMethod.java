@@ -5,33 +5,33 @@ package Methods;
  */
 public abstract class AbstractMethod implements OptimisationMethod
 {
-    private int leftEdge;
-    private int rightEdge;
+    private double leftEdge;
+    private double rightEdge;
     private double eps;
 
-    public AbstractMethod(int leftEdge, int rightEdge, double eps)
+    public AbstractMethod(double leftEdge, double rightEdge, double eps)
     {
         this.leftEdge = leftEdge;
         this.rightEdge = rightEdge;
         this.eps = eps;
     }
 
-    public int getLeftEdge()
+    public double getLeftEdge()
     {
         return leftEdge;
     }
 
-    public void setLeftEdge(int leftEdge)
+    public void setLeftEdge(double leftEdge)
     {
         this.leftEdge = leftEdge;
     }
 
-    public int getRightEdge()
+    public double getRightEdge()
     {
         return rightEdge;
     }
 
-    public void setRightEdge(int rightEdge)
+    public void setRightEdge(double rightEdge)
     {
         this.rightEdge = rightEdge;
     }
@@ -41,7 +41,7 @@ public abstract class AbstractMethod implements OptimisationMethod
         return eps;
     }
 
-    public void setEps(int eps)
+    public void setEps(double eps)
     {
         this.eps = eps;
     }
@@ -52,7 +52,7 @@ public abstract class AbstractMethod implements OptimisationMethod
     public double getY(double x)
     {
         //исходная формула
-        return Math.pow(x, 5) + 2 * Math.pow(x, 3) - 2 * x - 1;
+        return Math.pow(x, 5) + 4 * Math.pow(x, 3) + 4 * x - 3;
     }
 
 }
