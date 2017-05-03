@@ -5,7 +5,7 @@ package Methods;
  */
 public class GoldenSectionImpl extends AbstractMethod implements OptimisationMethod
 {
-    public GoldenSectionImpl(int leftEdge, int rightEdge, double eps)
+    public GoldenSectionImpl(double leftEdge, double rightEdge, double eps)
     {
         super(leftEdge, rightEdge, eps);
     }

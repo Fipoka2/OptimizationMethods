@@ -3,7 +3,7 @@ package Methods;
 // Метод парабол
 public class ParabolasMethodImpl extends AbstractMethod implements OptimisationMethod
 {
-    public ParabolasMethodImpl(int leftEdge, int rightEdge, double eps)
+    public ParabolasMethodImpl(double leftEdge, double rightEdge, double eps)
     {
         super(leftEdge, rightEdge, eps);
     }

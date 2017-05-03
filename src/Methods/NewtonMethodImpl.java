@@ -5,7 +5,7 @@ package Methods;
  */
 public class NewtonMethodImpl extends AbstractMethod implements OptimisationMethod
 {
-    public NewtonMethodImpl(int leftEdge, int rightEdge, double eps)
+    public NewtonMethodImpl(double leftEdge, double rightEdge, double eps)
     {
         super(leftEdge, rightEdge, eps);
     }
@@ -13,13 +13,13 @@ public class NewtonMethodImpl extends AbstractMethod implements OptimisationMeth
     private double f1(double x)
     {
         //Первая производная Левой части Исходного Уравнения
-        return 5 * Math.pow(x, 4) + 12 * Math.pow(x, 2) + 4;
+        return 5 * Math.pow(x, 4) - 12 * Math.pow(x, 2) + 4;
 
     }
     private double f2(double x)
     {
         //Вторая производная Левой части Исходного Уравнения
-        return 20 * Math.pow(x, 3) + 24 * x;
+        return 20 * Math.pow(x, 3) - 24 * x;
     }
 
     @Override

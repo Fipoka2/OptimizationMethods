@@ -52,7 +52,7 @@ public abstract class AbstractMethod implements OptimisationMethod
     public double getY(double x)
     {
         //исходная формула
-        return Math.pow(x, 5) + 4 * Math.pow(x, 3) + 4 * x - 3;
+        return Math.pow(x, 5) - 4 * Math.pow(x, 3) + 4 * x - 3;
     }
 
 }

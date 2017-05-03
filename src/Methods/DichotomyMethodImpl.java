@@ -5,7 +5,7 @@ package Methods;
  */
 public class DichotomyMethodImpl extends AbstractMethod implements OptimisationMethod
 {
-    public DichotomyMethodImpl(int leftEdge, int rightEdge, double eps)
+    public DichotomyMethodImpl(double leftEdge, double rightEdge, double eps)
     {
         super(leftEdge, rightEdge, eps);
     }
